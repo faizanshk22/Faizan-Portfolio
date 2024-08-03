@@ -1,0 +1,27 @@
+@import "../../app.scss";
+.footer-background {
+    background-color: #111827; /* Dark background color */
+  
+  .footer-container {
+    max-width: 100%; /* Full-width container */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* Container padding */
+    padding-right: 1rem; /* Container padding */
+    padding-top: 1.5rem; /* Top padding */
+    padding-bottom: 1.5rem; /* Bottom padding */
+   
+    @include mobile{
+      width: 100%;
+      padding: 10px;
+      flex-direction: column;
+    }
+  }
+  
+  .footer-text {
+    text-align: center; /* Center-align text */
+    color: #ffffff; /* White text color */
+    font-size: 1.25rem; /* Extra-large text size */
+    font-family: 'Neue Montreal', sans-serif; /* Custom font family */
+  }  
+}
