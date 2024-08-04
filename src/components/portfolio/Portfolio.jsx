@@ -14,7 +14,7 @@ const items = [
     id: 2,
     title: "Realtime Chatting App",
     img:"fiv5.png",
-    desc:"This Application was built on Ruby on Rails using web-sockets and turbo stream for realtime experience. ",
+    desc:"This Application was built on ROR using websockets for realtime experience.",
 },
 {
     id: 3,

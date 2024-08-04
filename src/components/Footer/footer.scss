@@ -2,6 +2,11 @@
 .footer-background {
     background-color: #111827; /* Dark background color */
   
+    @include mobile{
+      margin-top: 130px;
+      position: sticky;
+    }
+
   .footer-container {
     max-width: 100%; /* Full-width container */
     margin-left: auto;

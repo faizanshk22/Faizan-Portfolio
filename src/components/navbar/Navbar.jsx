@@ -22,3 +22,4 @@ function Navbar() {
 }
 
 export default Navbar
+{/* <a href='/'><img src="/F.png" alt="F" /><img src="/S.png" alt="S" /></a> */}
