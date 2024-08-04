@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation for route detection
 
 const variants = {
-  open:{
-    transition:{
+  open: {
+    transition: {
       staggerChildren: 0.1,
     },
   },
@@ -12,32 +13,59 @@ const variants = {
       staggerDirection: -1,
     },
   },
-}
+};
+
 const itemVariants = {
-  open:{
-   y: 50,
-   opacity: 1,
+  open: {
+    y: 50,
+    opacity: 1,
   },
   closed: {
-   y: 50, 
-   opacity: 0,
+    y: 50,
+    opacity: 0,
   },
-}
+};
+
 function Links() {
+  const location = useLocation(); // Get the current route location
+  const isAboutPage = location.pathname === '/about'; // Check if the current route is '/about'
+
   const items = [
-    'Homepage',
-    'Services',
-    'Portfolio',
-    'Contact',
-    'About'
-  ]
+    { name: 'Homepage', path: '/' },
+    { name: 'Services', id: 'Services' },
+    { name: 'Portfolio', id: 'Portfolio' },
+    { name: 'Contact', id: 'Contact' },
+    { name: 'About Me', path: '/about' }
+  ];
+
   return (
     <motion.div className='links' variants={variants}>
-      {items.map(item=>(
-        <motion.a href={`#${item}`} key={item} variants={itemVariants} whileHover={{scale: 1.1}} whileTap={{scale: 0.95}}>{item}</motion.a>
-      ))}
+      {items.map(item => {
+        if (isAboutPage && item.name !== 'Homepage') {
+          return null; // Hide all links except 'Homepage' when on the '/about' page
+        }
+
+        return (
+          <motion.div
+            key={item.name}
+            variants={itemVariants}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {item.path ? (
+              <Link to={item.path} className='link'>
+                {item.name}
+              </Link>
+            ) : (
+              <a href={`#${item.id}`} className='link'>
+                {item.name}
+              </a>
+            )}
+          </motion.div>
+        );
+      })}
     </motion.div>
-  )
+  );
 }
 
-export default Links
+export default Links;

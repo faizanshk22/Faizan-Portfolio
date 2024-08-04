@@ -1,0 +1,93 @@
+@import "../../app.scss"; // Import global styles if any
+
+.about {
+  // Overall container styling
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(180deg, #111132, #111132);
+
+  .intro {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: wheat; // Primary color
+      margin-bottom: 10px;
+    }
+    hr{
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    h2{
+      color: wheat;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6c757d; // Secondary color
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      strong{
+        color: wheat;
+      }
+    }
+  }
+
+  .team {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: #1c274c;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #6c757d;
+        text-align: center;
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 50px;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1c274c;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+  }
+}
