@@ -59,6 +59,9 @@
           font-weight: 300;
           z-index: 10; /* Ensure button is on top of other elements */
           position: relative; /* Ensure proper stacking context */
+          @include mobile {
+            padding: 10px;
+          }
         }
       }
 
@@ -75,9 +78,9 @@
     right: 0;
 
     @include mobile {
-      height: 60%;
+      height: 100%;
       width: 100%;
-      top: unset;
+      top: 230px;
       bottom: 0;
     }
 
