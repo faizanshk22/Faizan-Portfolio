@@ -24,7 +24,9 @@ function App() {
       <section id="Contact">
         <Contact />
       </section>
+      <section className='footer'>
       <Footer/>
+      </section>
     </div>
   );
 }
