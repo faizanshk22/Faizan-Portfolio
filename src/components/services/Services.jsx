@@ -35,13 +35,13 @@ function Services() {
         </div>
         <div className="title">
           <h1><motion.b whileHover={{color:"#FF7F50"}}>For Your </motion.b>Business.</h1>
-          <button>WHAT WE DO?</button>
+          <button>WHAT I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div 
           className="box" 
-          whileHover={{ backgroundColor: "orange", color: "black" }}
+          // whileHover={{ backgroundColor: "orange", color: "black" }}
         >
           <h2>Branding</h2>
           <p>
@@ -52,7 +52,7 @@ function Services() {
         </motion.div>
         <motion.div 
           className="box" 
-          whileHover={{ backgroundColor: "orange", color: "black" }}
+          // whileHover={{ backgroundColor: "orange", color: "black" }}
         >
           <h2>Web App Development</h2>
           <p>
@@ -63,7 +63,7 @@ function Services() {
         </motion.div>
         <motion.div 
           className="box" 
-          whileHover={{ backgroundColor: "orange", color: "black" }}
+          // whileHover={{ backgroundColor: "orange", color: "black" }}
         >
           <h2>Mobile App Development</h2>
           <p>
@@ -75,11 +75,11 @@ function Services() {
         </motion.div>
         <motion.div 
           className="box" 
-          whileHover={{ backgroundColor: "orange", color: "black" }}
+          // whileHover={{ backgroundColor: "orange", color: "black" }}
         >
           <h2>Search Engine Optimization</h2>
           <p>
-          SEO involves optimizing various
+          Search Engine Optimization involves optimizing various
           technical and content-related aspects of a website 
           to improve its ranking and attract organic traffic. 
           </p>

@@ -48,7 +48,7 @@ function Hero() {
           <motion.h2 variants={textVariants}>
             FAIZAN SHEIKH
           </motion.h2>
-          <motion.h1 variants={textVariants}>Web Developer and UI designer</motion.h1>
+          <motion.h1 variants={textVariants}>Web Developer and SEO Expert</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href={resume} download="resume">
               <motion.button variants={textVariants}>

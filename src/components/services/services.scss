@@ -129,6 +129,10 @@
                 background-color: #FF7F50;
                 border: none;
                 cursor: pointer;
+                &:hover {
+                    background-color: white; 
+                    color: #000;
+                  }
 
                 @include mobile{
                     background-color: transparent;
