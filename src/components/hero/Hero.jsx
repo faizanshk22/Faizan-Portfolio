@@ -55,7 +55,7 @@ function Hero() {
                 Download Resume
               </motion.button>
             </a>
-            <a href="/about" >
+            <a href="/about" target="_blank" rel="noopener noreferrer">
               <motion.button variants={textVariants}>
                 About Me
               </motion.button>
