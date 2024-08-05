@@ -33,9 +33,9 @@ function Contact() {
       e.preventDefault();
   
       emailjs
-        .sendForm('service_d8z7w8c', 'template_w56gpso', formRef.current, {
-          publicKey: 'LpimHLaW94GjUAXoW',
-        })
+        .sendForm('service_d8z7w8c',
+        'template_w56gpso', formRef.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
         .then(
           (result) => {
             setSuccess(true)
