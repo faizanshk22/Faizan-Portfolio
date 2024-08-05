@@ -35,7 +35,7 @@ function Links() {
     { name: 'Services', id: 'Services' },
     { name: 'Portfolio', id: 'Portfolio' },
     { name: 'Contact', id: 'Contact' },
-    { name: 'About Me', path: '/about' }
+    // { name: 'About Me', path: '/about' }
   ];
 
   return (

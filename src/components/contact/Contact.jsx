@@ -28,16 +28,16 @@ function Contact() {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let's do work together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>faizanshk20@gmail.com</span>
+        <img width="30" height="30" src="email.png" alt="Email"/>
+          <p>faizanshk20@gmail.com</p>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
+        <img width="30" height="30" src="location.png" alt="Location"/>
           <span>Dubai Tower, Shalimar Link Road, Lahore</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+92 3244282516</span>
+        <img width="30" height="30" src="phone.png" alt="Phone"/>
+          <p>+92 3244282516</p>
         </motion.div>
       </motion.div>
       <div className="formContainer">

@@ -26,6 +26,16 @@
            align-items: center;
            margin-top: 50px;
           }
+          .item {
+            display: flex;
+            align-items: center; /* Centers items vertically */
+            gap: 20px; /* Optional: Adds space between image and text */
+          }
+          
+          .item img {
+            display: block; /* Ensures no extra space below the image */
+          }
+          
 
         h1{
             font-size: 100px;
@@ -45,7 +55,7 @@
         
 
         @include mobile{
-            margin-top: -100px;
+            margin-top: -90px;
             padding: 50px;
             width: 100%;
           }
