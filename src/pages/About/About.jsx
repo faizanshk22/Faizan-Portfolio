@@ -58,7 +58,7 @@ function About() {
         
         </motion.div> */}
       </div>
-      <Footer/>
+      <Footer isAbout={true} />
     </>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import './footer.scss'; 
+import './footer.scss';
 
-function Footer() {
+function Footer({ isAbout }) {
   return (
-    <div className="footer-background">
+    <div className={`footer-background ${isAbout ? 'about-page-footer' : ''}`}>
       <footer className="footer-container">
         <p className="footer-text">
           &copy; Copyright 2024. All rights reserved

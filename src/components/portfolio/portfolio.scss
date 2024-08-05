@@ -98,16 +98,37 @@
         }
 
         button {
-          background-color: #FF7F50;
+          position: relative;
+          z-index: 1;
+          background-color: wheat;
           border: none;
           border-radius: 10px;
           padding: 10px;
           width: 200px;
+          font-weight: bold;
+          margin-top: -20px;
           cursor: pointer;
 
           @include mobile {
-            width: auto; /* Responsive button width */
-            padding: 8px;
+            width: 100px; /* Responsive button width */
+            padding: 6px;
+          }
+          .mini-circle {
+            width: 10px;      // Adjust the size as needed
+            height: 10px;     // Adjust the size as needed
+            background-color: red; // Red color
+            border-radius: 50%; // Makes it a circle
+            padding-left: 10px;
+            margin-right: 6px;
+            margin-top: 4px;
+          }
+          &.disabled{
+            background-color: gray;
+          color: darkgray;
+          cursor: not-allowed;
+          .mini-circle{
+           background-color: darkgray;   
+          }
           }
         }
 

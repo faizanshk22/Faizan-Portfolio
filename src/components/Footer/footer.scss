@@ -1,10 +1,15 @@
 @import "../../app.scss";
 .footer-background {
-    background-color: #111827; /* Dark background color */
+    background-color: #111827; 
   
     @include mobile{
-      margin-top: 130px;
+      margin-top: 100px;
       position: sticky;
+    }
+    &.about-page-footer {
+      @include mobile {
+        margin-top: 0; 
+      }
     }
 
   .footer-container {
