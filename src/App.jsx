@@ -10,9 +10,11 @@ import Contact from './components/contact/Contact';
 import Cursor from './components/cursor/Cursor';
 import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
+import whatappLogo from './assets/wlogo.png';
 
 function App() {
   return (
+    <>
     <Router>
       <Cursor />
       <Routes>
@@ -37,6 +39,12 @@ function App() {
         <Route path='/about' element={<About />} />
       </Routes>
     </Router>
+    <div className="whatsapp-button">
+  <a href="https://wa.me/923244282516?text=Hello How can I help you?" target="_blank">
+    <img src={whatappLogo} width="60" alt="w/a" />
+  </a>
+</div>
+    </>
   );
 }
 
