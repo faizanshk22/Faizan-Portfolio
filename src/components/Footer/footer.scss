@@ -3,7 +3,7 @@
     background-color: #111827; 
   
     @include mobile{
-      margin-top: 100px;
+      margin-top: 20px;
       position: sticky;
     }
     &.about-page-footer {
