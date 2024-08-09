@@ -32,7 +32,7 @@ function Links() {
 
   const items = [
     { name: 'Homepage', path: '/' },
-    // { name: 'About Me', path: '/about' },
+    { name: 'About Me', path: '/about' },
     { name: 'Services', id: 'Services' },
     { name: 'Portfolio', id: 'Portfolio' },
     { name: 'Contact', id: 'Contact' },
