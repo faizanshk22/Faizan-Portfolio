@@ -55,11 +55,11 @@ function Hero() {
                 Download Resume
               </motion.button>
             </a>
-            {/* <a href="/about" target="_blank" rel="noopener noreferrer">
+            <a href="/about" target="_blank" rel="noopener noreferrer">
               <motion.button variants={textVariants}>
                 About Me
               </motion.button>
-            </a> */}
+            </a>
             {/* <motion.button variants={textVariants}>Contact Me</motion.button> */}
           </motion.div>
           <motion.img variants={textVariants} animate='scrollButton' src="/scroll.png" alt="" />
