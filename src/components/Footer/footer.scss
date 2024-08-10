@@ -1,16 +1,22 @@
 @import "../../app.scss";
+
 .footer-background {
-    background-color: #111827; 
-  
-    @include mobile{
-      margin-top: 20px;
-      position: sticky;
+  background-color: #111827;
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0; /* Position it at the bottom of the screen */
+  width: 100%; /* Make sure the footer takes up the full width */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+
+  @include mobile {
+    margin-top: 20px;
+    position: sticky; /* Keeps the footer sticky on mobile */
+  }
+
+  &.about-page-footer {
+    @include mobile {
+      margin-top: 0;
     }
-    &.about-page-footer {
-      @include mobile {
-        margin-top: 0; 
-      }
-    }
+  }
 
   .footer-container {
     max-width: 100%; /* Full-width container */
@@ -20,18 +26,18 @@
     padding-right: 1rem; /* Container padding */
     padding-top: 1.5rem; /* Top padding */
     padding-bottom: 1.5rem; /* Bottom padding */
-   
-    @include mobile{
+
+    @include mobile {
       width: 100%;
       padding: 10px;
       flex-direction: column;
     }
   }
-  
+
   .footer-text {
     text-align: center; /* Center-align text */
     color: #ffffff; /* White text color */
     font-size: 1.25rem; /* Extra-large text size */
     font-family: 'Neue Montreal', sans-serif; /* Custom font family */
-  }  
+  }
 }
