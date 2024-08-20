@@ -18,6 +18,16 @@
             text-align: center;
           }
     }
+    .work-text {
+        font-size: 100px;
+        margin-top: 50px;
+        text-align: center;
+    
+        @include mobile {
+          font-size: 40px;
+          margin-top: 15px;
+        }
+      }
 
     .mountains{
         background-image: url("/mountains.png");
