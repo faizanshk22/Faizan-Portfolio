@@ -18,9 +18,9 @@ const items = [
   },
   {
     id: 3,
-    title: "VidTube(Youtube Clone)",
-    img: "yt-clone.png",
-    desc: "This app was built on Next.js using youtube api to get data.",
+    title: "Learnify - Book Store",
+    img: "L2.png",
+    desc: "This app was built on MERN with Authorization to protect paid courses.",
   },
   {
     id: 4,
