@@ -9,12 +9,13 @@ const items = [
     title: "React Business Website",
     img: "dv.png",
     desc: "This Company Project was built on pure react with using of different libraries.",
+    link: "https://dev-coders.vercel.app"
   },
   {
     id: 2,
-    title: "Realtime Chatting App",
-    img: "fiv5.png",
-    desc: "This Application was built on ROR using websockets for realtime experience.",
+    title: "Fitness Mania GMS",
+    img: "gym.png",
+    desc: "This Gym Management System is completely build on MERN stack with authentications.",
   },
   {
     id: 3,
@@ -26,8 +27,14 @@ const items = [
     id: 4,
     title: "Banking Application",
     img: "bk.png",
-    desc: "This is a fullstack(React & ROR) application with user and admin interfaces",
-  }
+    desc: "This is a fullstack(React & ROR) application with user and admin interfaces.",
+  },
+  {
+    id: 5,
+    title: "Realtime Chatting App",
+    img: "fiv5.png",
+    desc: "This Application was built on ROR using websockets for realtime experience.",
+  },
 ];
 
 const Single = ({ item }) => {
@@ -40,7 +47,7 @@ const Single = ({ item }) => {
   const isLive = item.id === 1;
   const buttonClass = isLive ? 'live' : 'disabled';
 
-  return (
+  const content = (
     <section>
       <div className="container">
         <div className="wrapper">
@@ -51,12 +58,10 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             {isLive ? (
-              <a href='https://dev-coders.vercel.app' target="_blank" rel="noopener noreferrer">
-                <button className={buttonClass}>
-                  <FaCircle className='mini-circle' />
-                  Live
-                </button>
-              </a>
+              <button className={buttonClass}>
+                <FaCircle className='mini-circle' />
+                Live
+              </button>
             ) : (
               <button className={buttonClass}>
                 <FaCircle className='mini-circle' />
@@ -68,7 +73,13 @@ const Single = ({ item }) => {
       </div>
     </section>
   );
-}
+
+  return isLive ? (
+    <a href={item.link} target="_blank" rel="noopener noreferrer">{content}</a>
+  ) : (
+    content
+  );
+};
 
 function Portfolio() {
   const ref = useRef();
