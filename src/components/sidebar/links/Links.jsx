@@ -26,9 +26,9 @@ const itemVariants = {
   },
 };
 
-function Links() {
-  const location = useLocation(); // Get the current route location
-  const isAboutPage = location.pathname === '/about'; // Check if the current route is '/about'
+function Links({ setOpen }) { // Accept setOpen prop
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
 
   const items = [
     { name: 'Homepage', path: '/' },
@@ -41,9 +41,7 @@ function Links() {
   return (
     <motion.div className='links' variants={variants}>
       {items.map(item => {
-        if (isAboutPage && item.name !== 'Homepage') {
-          return null; // Hide all links except 'Homepage' when on the '/about' page
-        }
+        if (isAboutPage && item.name !== 'Homepage') return null;
 
         return (
           <motion.div
@@ -53,11 +51,11 @@ function Links() {
             whileTap={{ scale: 0.95 }}
           >
             {item.path ? (
-              <Link to={item.path} className='link'>
+              <Link to={item.path} className='link' onClick={() => setOpen(false)}> 
                 {item.name}
               </Link>
             ) : (
-              <a href={`#${item.id}`} className='link'>
+              <a href={`#${item.id}`} className='link' onClick={() => setOpen(false)}>
                 {item.name}
               </a>
             )}

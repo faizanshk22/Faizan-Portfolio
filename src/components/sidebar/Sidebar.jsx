@@ -24,17 +24,16 @@ const variants = {
   }
 };
 function Sidebar() {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-
-    return (
-        <motion.div className='sidebar' animate={open ? 'open' : 'closed'}>
-            <motion.div className='bg' variants={variants}>
-                <Links />
-            </motion.div>
-            <ToggleButton setOpen={setOpen} />
-        </motion.div>
-    );
+  return (
+      <motion.div className='sidebar' animate={open ? 'open' : 'closed'} initial={false}>
+          <motion.div className='bg' variants={variants}>
+              <Links setOpen={setOpen} /> {/* Pass setOpen to Links */}
+          </motion.div>
+          <ToggleButton setOpen={setOpen} />
+      </motion.div>
+  );
 }
 
 export default Sidebar;
