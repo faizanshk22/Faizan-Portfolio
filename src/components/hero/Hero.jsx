@@ -1,7 +1,7 @@
 import React from 'react';
 import './hero.scss';
 import { motion } from 'framer-motion';
-import resume from '../../assets/Faizan--Resume.pdf';
+import resume from '../../assets/FaizanCV.pdf';
 
 const textVariants = {
   initial: {
