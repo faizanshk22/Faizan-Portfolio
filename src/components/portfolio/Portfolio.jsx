@@ -58,10 +58,12 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             {isLive ? (
-              <button className={buttonClass}>
+              <motion.button  variants={bounce}
+        initial='hidden'
+        animate='visible' className={buttonClass}>
                 <FaCircle className='mini-circle' />
                 Live
-              </button>
+              </motion.button>
             ) : (
               <button className={buttonClass}>
                 <FaCircle className='mini-circle' />
@@ -81,6 +83,18 @@ const Single = ({ item }) => {
   );
 };
 
+const bounce = {
+  hidden: { scale: 1 },
+  visible: { 
+    scale: [1, 0.8, 1], 
+    transition: { 
+      duration: 1, 
+      ease: 'easeOut', 
+      repeat: Infinity,
+      repeatType: 'loop'
+    }
+  },
+};
 function Portfolio() {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
