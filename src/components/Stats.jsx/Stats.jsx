@@ -4,11 +4,11 @@ import './stats.scss';
 
 const stats = [
     {
-        num: 3,
+        num: 4,
         text: "Years of experience",
     },
     {
-        num: 5,
+        num: 12,
         text: "Projects Completed",
     },
     {
@@ -16,7 +16,7 @@ const stats = [
         text: "Technologies mastered",
     },
     {
-        num: 50,
+        num: 500,
         text: "Code Commits",
     },
 ];
